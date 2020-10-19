@@ -44,6 +44,6 @@ USER pptruser
 CMD ["google-chrome-stable"]
 
 EXPOSE 80
-# TEMP: Operation not permitted
-# RUN chmod +x $METEORD_DIR/run_app.sh
+
+RUN chmod +x $METEORD_DIR/run_app.sh
 ENTRYPOINT exec $METEORD_DIR/run_app.sh
