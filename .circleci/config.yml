@@ -18,6 +18,9 @@ jobs:
       #     name: Test
       #     command: cd tests && bash run_tests.sh
       - run:
+          name: Build Tags
+          command: cd tests && bash build_it.sh
+      - run:
           name: Deploy
           command: |
             docker images
