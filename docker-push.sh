@@ -1,4 +1,4 @@
-NODE_VERSION="12.16.1"
+NODE_VERSION="12.19.0"
 NODE_MAJOR="12"
 DOCKER_HUB_REPO="uncleiroh/meteord-puppeteer"
 BASE_IMAGE_NAME="${DOCKER_HUB_REPO}:node-"
