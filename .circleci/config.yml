@@ -8,15 +8,15 @@ jobs:
       NODE_VERSION: 12.19.0
     steps:
       - checkout
-      - run:
-          name: Install Meteor
-          command: curl https://install.meteor.com | sh
-      - run:
-          name: Build
-          command: cd tests && bash build_it.sh
-      - run:
-          name: Test
-          command: cd tests && bash run_tests.sh
+      # - run:
+      #     name: Install Meteor
+      #     command: curl https://install.meteor.com | sh
+      # - run:
+      #     name: Build
+      #     command: cd tests && bash build_it.sh
+      # - run:
+      #     name: Test
+      #     command: cd tests && bash run_tests.sh
       - run:
           name: Deploy
           command: |
