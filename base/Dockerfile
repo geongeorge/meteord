@@ -31,17 +31,17 @@ RUN chmod +x /usr/local/bin/dumb-init
 ENTRYPOINT ["dumb-init", "--"]
 
 # Install puppeteer so it's available in the container.
-RUN npm i puppeteer --unsafe-perm \
+RUN npm i puppeteer --unsafe-perm
     # Add user so we don't need --no-sandbox.
     # same layer as npm install to keep re-chowned files from using up several hundred MBs more space
-    && groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
-    && mkdir -p /home/pptruser/Downloads \
-    && chown -R pptruser:pptruser /home/pptruser \
-    && chown -R pptruser:pptruser /node_modules
+    # && groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
+    # && mkdir -p /home/pptruser/Downloads \
+    # && chown -R pptruser:pptruser /home/pptruser \
+    # && chown -R pptruser:pptruser /node_modules
 
 
 # USER pptruser
-CMD ["google-chrome-stable"]
+# CMD ["google-chrome-stable"]
 
 # Run everything after as non-privileged user.
 EXPOSE 80
