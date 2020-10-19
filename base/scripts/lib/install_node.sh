@@ -11,9 +11,6 @@ NODE_ARCH=x64
 
 NODE_DIST=node-v${NODE_VERSION}-linux-${NODE_ARCH}
 
-# TEMP
-apt-get update -y
-apt-get install -y curl
 
 cd /tmp
 curl -O -L http://nodejs.org/dist/v${NODE_VERSION}/${NODE_DIST}.tar.gz
