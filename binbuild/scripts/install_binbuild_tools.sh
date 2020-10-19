@@ -29,6 +29,6 @@ npm install -g node-gyp
 # pre-install node source code for faster building
 echo "Pre-install node source code for faster building v${NODE_VERSION}"
 # TEMP: Enabling this
-# $(npm bin -g)/node-gyp install ${NODE_VERSION}
+$(npm bin -g)/node-gyp install ${NODE_VERSION}
 
 bash $METEORD_DIR/lib/cleanup.sh
