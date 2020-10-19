@@ -3,10 +3,7 @@
 version: 2
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:12
-    # machine: true
+    machine: true
     environment:
       NODE_VERSION: 12.19.0
     steps:
