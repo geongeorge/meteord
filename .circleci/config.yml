@@ -3,7 +3,9 @@
 version: 2
 jobs:
   build:
-    machine: true
+    # machine: true
+    docker:
+      - image: circleci/node:6
     environment:
       NODE_VERSION: 12.19.0
       BASH_ENV: ~/.nvm/nvm.sh
