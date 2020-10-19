@@ -61,4 +61,4 @@ workflows:
       - build:
           filters:
             branches:
-              #only: /^node-[0-9.]+$/
+              only: /^node-[0-9.]+$/
