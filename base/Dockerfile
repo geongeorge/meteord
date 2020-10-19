@@ -10,7 +10,8 @@ ONBUILD ENV NODE_VERSION ${NODE_VERSION:-12.19.0}
 
 RUN bash $METEORD_DIR/lib/install_base.sh
 RUN bash $METEORD_DIR/lib/install_node.sh
-RUN bash $METEORD_DIR/lib/install_phantomjs.sh
+# No Need Phantom js anymore
+# RUN bash $METEORD_DIR/lib/install_phantomjs.sh
 RUN bash $METEORD_DIR/lib/cleanup.sh
 
 # Install latest chrome dev package and fonts to support major charsets (Chinese, Japanese, Arabic, Hebrew, Thai and a few others)
