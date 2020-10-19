@@ -2,7 +2,7 @@ set -e
 set -x
 # for npm module re-building
 apt-get update -y
-apt-get -y install build-essential g++ libssl-dev git python
+apt-get -y install build-essential g++ libssl-dev git python curl bzip2
 
 # Install node
 
