@@ -11,3 +11,6 @@ docker build --build-arg "NODE_VERSION=${NODE_VERSION}" -t "uncleiroh/meteord-pu
   docker tag "uncleiroh/meteord-puppeteer:node-${NODE_VERSION}-devbuild" uncleiroh/meteord-puppeteer:devbuild
 docker build --build-arg "NODE_VERSION=${NODE_VERSION}" -t "uncleiroh/meteord-puppeteer:node-${NODE_VERSION}-binbuild" ../binbuild && \
   docker tag "uncleiroh/meteord-puppeteer:node-${NODE_VERSION}-binbuild" uncleiroh/meteord-puppeteer:binbuild
+
+
+exit 1
