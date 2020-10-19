@@ -6,6 +6,8 @@ apt-get -y install build-essential g++ libssl-dev git python
 
 # Install node
 
+NODE_DIST=node-v${NODE_VERSION}-linux-${NODE_ARCH}
+
 cd /tmp
 curl -O -L http://nodejs.org/dist/v${NODE_VERSION}/${NODE_DIST}.tar.gz
 tar xvzf ${NODE_DIST}.tar.gz
@@ -15,10 +17,12 @@ mv ${NODE_DIST} /opt/nodejs
 ln -sf /opt/nodejs/bin/node /usr/bin/node
 ln -sf /opt/nodejs/bin/npm /usr/bin/npm
 
-# End Install node
-
 echo "Current node version"
 node -v
+
+# End Install node
+
+
 
 
 npm install -g node-gyp
