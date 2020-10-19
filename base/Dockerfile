@@ -39,11 +39,14 @@ RUN npm i puppeteer --unsafe-perm \
     && chown -R pptruser:pptruser /node_modules
 
 # Run everything after as non-privileged user.
-USER pptruser
-
-CMD ["google-chrome-stable"]
-
 EXPOSE 80
 
 RUN chmod +x $METEORD_DIR/run_app.sh
+
+# Moved this here because chmod without root is not possible
+USER pptruser
+CMD ["google-chrome-stable"]
+
+
 ENTRYPOINT exec $METEORD_DIR/run_app.sh
+
