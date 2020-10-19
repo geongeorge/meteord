@@ -163,7 +163,7 @@ docker run -d \
 ### Build
 
 ```
-docker build --build-arg "NODE_VERSION=12.19.0" -t "uncleiroh/meteord-puppeteer:node-$12.19.0-base" ./base
+docker build --build-arg "NODE_VERSION=12.19.0" -t "uncleiroh/meteord-puppeteer:node-12.19.0-base" ./base
 ```
 
 ### Tag

@@ -27,7 +27,7 @@ NODE_ARCH=x64
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 node -v
 nvm install v12
-nvm alias default v12
+nvm alias default node
 
 echo "Current node version"
 node -v
