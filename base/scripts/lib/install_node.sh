@@ -22,15 +22,13 @@ NODE_ARCH=x64
 
 
 
-apt-get install -y build-essential checkinstall libssl-dev
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+# apt-get install -y build-essential checkinstall libssl-dev
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 
 
-echo 'export NVM_DIR="/opt/circleci/.nvm"' >> "$BASH_ENV"
-echo ' [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> "$BASH_ENV"
 
-nvm install v12
-nvm alias default node
+# nvm install v12
+# nvm alias default node
 
 echo "Current node version"
 node -v
